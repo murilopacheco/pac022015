@@ -13,4 +13,12 @@
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
     <name>pacPersistencia</name>
+    
+    <dependencies>
+        <dependency>
+            <groupId>br.ufg.inf.fabrica</groupId>
+            <artifactId>pacNegocio</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
