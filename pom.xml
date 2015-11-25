@@ -10,6 +10,7 @@
         <module>pacSeguranca</module>
         <module>pacNegocio</module>
         <module>pacControle</module>
+        <module>pacView</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
