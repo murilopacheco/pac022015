@@ -9,6 +9,7 @@
         <module>pacPersistencia</module>
         <module>pacSeguranca</module>
         <module>pacNegocio</module>
+        <module>pacDominio</module>
         <module>pacControle</module>
         <module>pacView</module>
     </modules>

@@ -6,18 +6,11 @@
         <artifactId>pac</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>pacNegocio</artifactId>
+    <artifactId>pacDominio</artifactId>
     <packaging>jar</packaging>
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
-    <name>pacNegocio</name>
-    <dependencies>
-        <dependency>
-            <groupId>br.ufg.inf.fabrica</groupId>
-            <artifactId>pacDominio</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+    <name>pacDominio</name>
 </project>
