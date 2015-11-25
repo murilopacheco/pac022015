@@ -1,4 +1,4 @@
-package br.ufg.inf.fabrica.negocio.dominio;
+package br.ufg.inf.fabrica.pac.negocio.dominio;
 
 /**
  * Foi definido que:
