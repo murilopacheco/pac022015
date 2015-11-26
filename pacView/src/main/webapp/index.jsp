@@ -28,6 +28,9 @@
     </head>
     <body>
         <div>
+            <%
+                if(session.getAttribute("usuario")==null){
+            %>
             <form action="autenticacao" method="post">
                 <div><input type="text" name="edtUsuario" placeholder="Informe usuário"></div>
                 <div><input type="password" name="edtSenha" placeholder="Informe senha"></div>
@@ -35,6 +38,15 @@
                     <input type="reset" value="Cancelar"/> &nbsp; <input type="submit" value="Confirmar"/>
                 </div>
             </form>
+            <%
+                } else {
+            %>
+            
+            <a href="pacotesAtribuidos.jsp">Pacotes atribuídos</a>
+            
+            <%
+                }
+            %>
         </div>
     </body>
 </html>

@@ -13,5 +13,8 @@
     </head>
     <body>
         <h1>Erro</h1>
+        <%=session.getAttribute("errorMessage") %>
+        <p/>
+        <a href="index.jsp">Página principal</a>
     </body>
 </html>

@@ -31,11 +31,13 @@ public class AutenticacaoServlet extends HttpServlet {
         }catch(Exception e){
             
         }
-        if(retornado==null){
-            response.sendRedirect("index.jsp");
-        } 
-        request.getSession().setAttribute("usuario", retornado);
-        response.sendRedirect("pacotesAtribuidos.jsp");
+        if(retornado!=null){
+            request.getSession().setAttribute("usuario", retornado);
+            response.sendRedirect("pacotesAtribuidos.jsp");
+        } else {
+            request.getSession().setAttribute("errorMessage", "Falha da autenticacao");
+            response.sendRedirect("erro.jsp");
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -11,7 +11,7 @@ public class LdapAutenticadorStub implements ILdapAutenticador{
 
     @Override
     public Usuario autenticar(Usuario usuario) {
-        if(usuario.getNome().equals("membro") &&
+        if(usuario.getLogin().equals("membro") &&
                 usuario.getSenha().equals("senha")){
             usuario.setNome("Membro de projeto");
             usuario.setIdProjeto("pac2015");
