@@ -1,31 +1,14 @@
-package br.ufg.inf.fabrica.pac.seguranca;
+package br.ufg.inf.fabrica.pac.seguranca.imp;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.List;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.naming.AuthenticationException;
-import javax.naming.CommunicationException;
-import javax.naming.Context;
-import javax.naming.NamingEnumeration;
-import javax.naming.NamingException;
-import javax.naming.directory.Attribute;
-import javax.naming.directory.Attributes;
-import javax.naming.directory.BasicAttribute;
-import javax.naming.directory.BasicAttributes;
-import javax.naming.directory.DirContext;
-import javax.naming.directory.InitialDirContext;
-import javax.naming.directory.ModificationItem;
-import javax.naming.directory.SearchControls;
-import javax.naming.directory.SearchResult;
+import br.ufg.inf.fabrica.pac.negocio.dominio.Usuario;
+import br.ufg.inf.fabrica.pac.seguranca.ILdapAutenticador;
 
-public class Autenticador implements IAutenticador{
+public class LdapAutenticador implements ILdapAutenticador{
 
     @Override
-    public void autenticar(String usuario, String senha) {
+    public Usuario autenticar(Usuario user) {
+        String usuario = user.getLogin();
+        String senha = user.getSenha();
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 //

@@ -7,6 +7,11 @@ package br.ufg.inf.fabrica.pac.negocio.dominio;
 public class Usuario {
     private String login;
     private String idProjeto;
+    private boolean ativo;
+    
+    //Transient
+    private String senha;
+    private String nome;
 
     public String getIdProjeto() {
         return idProjeto;
@@ -16,11 +21,6 @@ public class Usuario {
         this.idProjeto = idProjeto;
     }
     
-    //Transient
-    private String senha;
-    //Transient
-    private String nome;
-
     public String getLogin() {
         return login;
     }
@@ -43,5 +43,13 @@ public class Usuario {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+    
+    public boolean isAtivo(){
+        return this.ativo;
+    }
+    
+    public void setAtivo(boolean value){
+        this.ativo = value;
     }
 }
