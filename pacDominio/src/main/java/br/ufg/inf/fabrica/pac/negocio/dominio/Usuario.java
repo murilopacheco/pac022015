@@ -5,12 +5,13 @@ package br.ufg.inf.fabrica.pac.negocio.dominio;
  * @author danilloguimaraes
  */
 public class Usuario {
+    //Id não é gerado automaticamente, ele é gerado pelo ldap
     private long id;
-    private String login;
     private String idProjeto;
     private boolean ativo;
     
     //Transient
+    private String login;
     private String senha;
     private String nome;
 

@@ -12,31 +12,31 @@ public class Andamento {
     private Date dataPrevistaConclusao;
     private String descricao;
     
-    private String idPacote;
-    private String idEstado;
-    private String usuario;
+    private long idPacote;
+    private long idEstado;
+    private long usuario;
 
-    public String getIdPacote() {
+    public long getIdPacote() {
         return idPacote;
     }
 
-    public void setIdPacote(String idPacote) {
+    public void setIdPacote(long idPacote) {
         this.idPacote = idPacote;
     }
 
-    public String getIdEstado() {
+    public long getIdEstado() {
         return idEstado;
     }
 
-    public void setIdEstado(String idEstado) {
+    public void setIdEstado(long idEstado) {
         this.idEstado = idEstado;
     }
 
-    public String getUsuario() {
+    public long getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(String usuario) {
+    public void setUsuario(long usuario) {
         this.usuario = usuario;
     }
 
