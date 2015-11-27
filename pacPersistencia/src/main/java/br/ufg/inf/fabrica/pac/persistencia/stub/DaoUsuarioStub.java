@@ -19,11 +19,19 @@ public class DaoUsuarioStub implements IDaoUsuario{
     }
 
     @Override
-    
     public Usuario salvar(Usuario usuario) {
         usuario.setAtivo(true);
         return usuario;
     }
 
-    
+    @Override
+    public Usuario excluir(Usuario entity) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Usuario buscar(long id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

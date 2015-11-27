@@ -6,9 +6,8 @@ import br.ufg.inf.fabrica.pac.negocio.dominio.Usuario;
  *
  * @author Danillo
  */
-public interface IDaoUsuario extends IDao{
+public interface IDaoUsuario extends IDao<Usuario>{
     
     public Usuario buscar(Usuario usuario);
     
-    public Usuario salvar(Usuario usuario);
 }

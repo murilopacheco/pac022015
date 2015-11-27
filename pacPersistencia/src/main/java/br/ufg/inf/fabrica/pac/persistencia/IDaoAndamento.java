@@ -8,15 +8,7 @@ import java.util.List;
  *
  * @author Danillo
  */
-public interface IDaoAndamento extends IDao{
-    
-    /**
-     * Salva respectivo andamento e retorna andamento atualizado com novo 
-     * identificador
-     * @param andamento
-     * @return 
-     */
-    public Andamento salvar(Andamento andamento);
+public interface IDaoAndamento extends IDao<Andamento>{
     
     /**
      * Retorna lista de andamentos de um respectivo pacote. Se o pacote não for 

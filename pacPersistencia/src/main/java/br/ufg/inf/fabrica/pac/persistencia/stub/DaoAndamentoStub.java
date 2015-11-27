@@ -20,5 +20,15 @@ public class DaoAndamentoStub implements IDaoAndamento{
     public List<Andamento> andamentosPorPacote(Pacote pacote) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public Andamento excluir(Andamento entity) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Andamento buscar(long id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
