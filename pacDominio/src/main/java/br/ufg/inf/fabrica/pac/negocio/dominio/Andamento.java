@@ -14,7 +14,7 @@ public class Andamento {
     
     private long idPacote;
     private long idEstado;
-    private long usuario;
+    private long idUsuario;
 
     public long getIdPacote() {
         return idPacote;
@@ -33,11 +33,11 @@ public class Andamento {
     }
 
     public long getUsuario() {
-        return usuario;
+        return idUsuario;
     }
 
     public void setUsuario(long usuario) {
-        this.usuario = usuario;
+        this.idUsuario = usuario;
     }
 
     public Date getDataModificacao() {
