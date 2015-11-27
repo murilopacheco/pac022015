@@ -7,7 +7,7 @@ import java.util.Date;
  * @author danilloguimaraes
  */
 public class Projeto {
-
+    private long id;
     private String nome;
     private String descricao;
     private Date dataInicio;
@@ -63,6 +63,12 @@ public class Projeto {
         this.stakeholders = stakeholders;
     }
     
+    public void setId(long id){
+        this.id = id;
+    }
     
+    public long getId(){
+        return this.id;
+    }    
 
 }

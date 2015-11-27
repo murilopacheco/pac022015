@@ -5,7 +5,7 @@ package br.ufg.inf.fabrica.pac.negocio.dominio;
  * @author danilloguimaraes
  */
 public class Estado {
-    
+    private long id;
     private String nome;
     private boolean estadoFinal;
     private String descricao;
@@ -33,5 +33,13 @@ public class Estado {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+    
+    public void setId(long id){
+        this.id = id;
+    }
+    
+    public long getId(){
+        return this.id;
     }
 }

@@ -7,6 +7,7 @@ import java.util.Date;
  * @author danilloguimaraes
  */
 public class Andamento {
+    private long id;
     private Date dataModificacao;
     private Date dataPrevistaConclusao;
     private String descricao;
@@ -62,4 +63,13 @@ public class Andamento {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+    
+    public void setId(long id){
+        this.id = id;
+    }
+    
+    public long getId(){
+        return this.id;
+    }
+    
 }

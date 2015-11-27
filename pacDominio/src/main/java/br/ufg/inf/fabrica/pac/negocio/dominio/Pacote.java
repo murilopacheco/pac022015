@@ -10,6 +10,7 @@ package br.ufg.inf.fabrica.pac.negocio.dominio;
  *     comentado acima com a palavra "Transient"
  */
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -18,40 +19,44 @@ import java.util.List;
  * @author danilloguimaraes
  */
 public class Pacote {
-    
+    private long id;
     private String nome;
     private String descricao;
     private Date dataCriacao;
     private boolean abandonado;
     private String documento;
     private Date dataPrevistaRealizacao;
-    private String idEstado;
-    private String idUsuario;
-    private String idProjeto;
     //transient
+    private long idEstado;
+    private long idUsuario;
+    private long idProjeto;
     private List<Long> andamentos;
 
-    public String getIdEstado() {
+    public Pacote(){
+        andamentos = new ArrayList<>();
+    }
+    
+    public long getIdEstado() {
         return idEstado;
     }
 
-    public void setIdEstado(String idEstado) {
+    public void setIdEstado(long idEstado) {
         this.idEstado = idEstado;
     }
 
-    public String getIdUsuario() {
+    public long getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(String idUsuario) {
+    public void setIdUsuario(long idUsuario) {
         this.idUsuario = idUsuario;
     }
 
-    public String getIdProjeto() {
+    public long getIdProjeto() {
         return idProjeto;
     }
 
-    public void setIdProjeto(String idProjeto) {
+    public void setIdProjeto(long idProjeto) {
         this.idProjeto = idProjeto;
     }
 
@@ -109,6 +114,14 @@ public class Pacote {
 
     public void setDataPrevistaRealizacao(Date dataPrevistaRealizacao) {
         this.dataPrevistaRealizacao = dataPrevistaRealizacao;
+    }
+    
+    public void setId(long id){
+        this.id = id;
+    }
+    
+    public long getId(){
+        return this.id;
     }
 
 }

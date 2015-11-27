@@ -5,6 +5,7 @@ package br.ufg.inf.fabrica.pac.negocio.dominio;
  * @author danilloguimaraes
  */
 public class Usuario {
+    private long id;
     private String login;
     private String idProjeto;
     private boolean ativo;
@@ -51,5 +52,13 @@ public class Usuario {
     
     public void setAtivo(boolean value){
         this.ativo = value;
+    }
+
+    public void setId(long id){
+        this.id = id;
+    }
+    
+    public long getId(){
+        return this.id;
     }
 }
