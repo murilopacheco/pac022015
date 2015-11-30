@@ -25,8 +25,6 @@ public class DaoAndamento implements IDaoAndamento{
 
     @Override
     public Andamento salvar(Andamento entity) {
-        Andamento a = null;
-        
         String sqlUpdate = "update ANDAMENTO set DataModificacao=?, DataPrevistaConclusao=?," +
                                 " Descricao=?, IdEstado=?, IdPacote=?, idUsuario=? " +
                                 " where id=?";

@@ -19,13 +19,6 @@ public class DaoProjeto implements IDaoProjeto{
 
     @Override
     public Projeto salvar(Projeto entity) {
-        entity.setDataInicio(null);
-        entity.setDataTermino(null);
-        entity.setDescricao(null);
-        entity.setId(0);
-        entity.setNome(null);
-        entity.setPatrocinador(null);
-        entity.setStakeholders(null);
         
         String sqlUpdate = "update PROJETO set DATAINICIO=?, DATATERMINO=?, DESCRICAO=?, NOME=?, PATROCINADOR=?, STAKEHOLDERS=? where ID=?";
         String sqlInsert = "insert into PROJETO (DATAINICIO, DATATERMINO, DESCRICAO, NOME, PATROCINADOR, STAKEHOLDERS) values (?, ?, ?, ?, ?, ?)";

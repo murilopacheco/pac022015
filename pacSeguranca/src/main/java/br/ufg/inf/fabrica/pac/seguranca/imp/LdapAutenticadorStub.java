@@ -14,7 +14,7 @@ public class LdapAutenticadorStub implements ILdapAutenticador{
         if(usuario.getLogin().equals("membro") &&
                 usuario.getSenha().equals("senha")){
             usuario.setNome("Membro de projeto");
-            usuario.setIdProjeto("pac2015");
+            usuario.setIdProjeto(1);
             return usuario;
         }
         return null;

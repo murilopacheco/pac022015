@@ -16,17 +16,19 @@ public class DaoUsuario implements IDaoUsuario{
 
     @Override
     public Usuario salvar(Usuario entity) {
-        String sqlUpdate = "update USUARIO set ativo=? where id=?";
-        String sqlInsert = "insert into USUARIO (ativo, id) values (?, ?)";
+        String sqlUpdate = "update USUARIO set ativo=?, idProjeto=? where id=?";
+        String sqlInsert = "insert into USUARIO (ativo, idProjeto, id) values (?, ?, ?)";
         try {
             PreparedStatement pst;
-            if(entity.getId()==0){
+            Usuario u = buscar(entity.getId());
+            if(u==null){
                 pst = Conexao.getConnection().prepareStatement(sqlInsert);
             } else {
                 pst = Conexao.getConnection().prepareStatement(sqlUpdate);
             }
             pst.setBoolean(1, true);
-            pst.setLong(2, entity.getId());
+            pst.setLong(2, entity.getIdProjeto());
+            pst.setLong(3, entity.getId());
             pst.execute();
             return entity;
         } catch (SQLException ex) {
@@ -63,6 +65,7 @@ public class DaoUsuario implements IDaoUsuario{
                 usuario = new Usuario();
                 usuario.setId(rs.getLong("id"));
                 usuario.setAtivo(rs.getBoolean("ativo"));
+                usuario.setIdProjeto(rs.getLong("idProjeto"));
             }
             return usuario;
         } catch (SQLException ex) {
