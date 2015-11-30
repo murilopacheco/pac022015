@@ -8,6 +8,4 @@ import br.ufg.inf.fabrica.pac.negocio.dominio.Usuario;
  */
 public interface IDaoUsuario extends IDao<Usuario>{
     
-    public Usuario buscar(Usuario usuario);
-    
 }
