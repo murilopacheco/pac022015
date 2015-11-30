@@ -32,12 +32,12 @@ public class Andamento {
         this.idEstado = idEstado;
     }
 
-    public long getUsuario() {
+    public long getIdUsuario() {
         return idUsuario;
     }
 
-    public void setUsuario(long usuario) {
-        this.idUsuario = usuario;
+    public void setIdUsuario(long idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public Date getDataModificacao() {

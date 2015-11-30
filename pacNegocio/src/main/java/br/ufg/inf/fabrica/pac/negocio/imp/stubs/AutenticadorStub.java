@@ -33,7 +33,7 @@ public class AutenticadorStub implements IAutenticador{
         
         //Verifica na persistencia se o usuário esta ativo
         IDaoUsuario daoUsuario = new DaoUsuarioStub();
-        u = daoUsuario.buscar(u);
+        u = daoUsuario.buscar(u.getId());
         if(u==null){
             daoUsuario.salvar(u);
         }

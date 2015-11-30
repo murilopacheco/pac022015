@@ -1,6 +1,7 @@
 package br.ufg.inf.fabrica.pac.persistencia.imp;
 
 import br.ufg.inf.fabrica.pac.negocio.dominio.Projeto;
+import br.ufg.inf.fabrica.pac.negocio.utils.Utils;
 import br.ufg.inf.fabrica.pac.persistencia.IDaoProjeto;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -36,8 +37,8 @@ public class DaoProjeto implements IDaoProjeto{
                 pst = Conexao.getConnection().prepareStatement(sqlUpdate);
                 pst.setLong(7, entity.getId());
             }
-            pst.setDate(1, convertUtilDateToSqlDate(entity.getDataInicio()));
-            pst.setDate(2, convertUtilDateToSqlDate(entity.getDataTermino()));
+            pst.setDate(1, Utils.convertUtilDateToSqlDate(entity.getDataInicio()));
+            pst.setDate(2, Utils.convertUtilDateToSqlDate(entity.getDataTermino()));
             pst.setString(3, entity.getDescricao());
             pst.setString(4, entity.getNome());
             pst.setString(5, entity.getPatrocinador());
@@ -85,8 +86,8 @@ public class DaoProjeto implements IDaoProjeto{
             if (rs.next()){
                 projeto = new Projeto();
                 projeto.setId(rs.getLong("id"));
-                projeto.setDataInicio(convertSqlDateToUtilDate(rs.getDate("dataInicio")));
-                projeto.setDataTermino(convertSqlDateToUtilDate(rs.getDate("dataTermino")));
+                projeto.setDataInicio( Utils.convertSqlDateToUtilDate(rs.getDate("dataInicio")));
+                projeto.setDataTermino(Utils.convertSqlDateToUtilDate(rs.getDate("dataTermino")));
                 projeto.setDescricao(rs.getString("descricao"));
                 projeto.setNome(rs.getString("nome"));
                 projeto.setPatrocinador(rs.getString("patrocinador"));
@@ -98,12 +99,5 @@ public class DaoProjeto implements IDaoProjeto{
             return null;
         }
     }
-    
-    private Date convertUtilDateToSqlDate(java.util.Date date){
-        return new Date(date.getTime());
-    }
-    
-    private java.util.Date convertSqlDateToUtilDate(Date date){
-        return new java.util.Date(date.getTime());
-    }
+
 }
