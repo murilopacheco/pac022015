@@ -12,6 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
+        Usuario <b> '${usuario.nome}' </b>  - Email: <b> ${usuario.email} </b> logado com sucesso
+        
         <h1>Pacotes atribuidos</h1>
         <form action="ManipuladorDePacote" method="post">
             <input type="submit" value="Visualizar detalhes"/>

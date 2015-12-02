@@ -2,7 +2,7 @@ package br.ufg.inf.fabrica.pac.view.servlets;
 
 import br.ufg.inf.fabrica.pac.negocio.IAutenticador;
 import br.ufg.inf.fabrica.pac.negocio.dominio.Usuario;
-import br.ufg.inf.fabrica.pac.negocio.imp.stubs.AutenticadorStub;
+import br.ufg.inf.fabrica.pac.negocio.imp.stubs.Autenticador;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,7 +24,7 @@ public class AutenticacaoServlet extends HttpServlet {
         usuario.setLogin(request.getParameter("edtUsuario"));
         usuario.setSenha(request.getParameter("edtSenha"));
         
-        IAutenticador autenticador = new AutenticadorStub();
+        IAutenticador autenticador = new Autenticador();
         Usuario retornado = null;
         try{
             retornado = autenticador.solicitarAutenticacao(usuario);
@@ -32,7 +32,7 @@ public class AutenticacaoServlet extends HttpServlet {
             
         }
         if(retornado!=null){
-            request.getSession().setAttribute("usuario", retornado);
+            request.getSession().setAttribute("usuario", retornado);            
             response.sendRedirect("pacotesAtribuidos.jsp");
         } else {
             request.getSession().setAttribute("errorMessage", "Falha da autenticacao");

@@ -5,15 +5,27 @@ package br.ufg.inf.fabrica.pac.negocio.dominio;
  * @author danilloguimaraes
  */
 public class Usuario {
+
     //Id não é gerado automaticamente, ele é gerado pelo ldap
     private long id;
     private String idProjeto;
     private boolean ativo;
-    
+
     //Transient
     private String login;
     private String senha;
     private String nome;
+    private String email;
+
+    public Usuario() {
+
+    }
+
+    public Usuario(String login, String nome, String email) {
+        this.login = login;
+        this.nome = nome;
+        this.email = email;
+    }
 
     public String getIdProjeto() {
         return idProjeto;
@@ -22,7 +34,7 @@ public class Usuario {
     public void setIdProjeto(String idProjeto) {
         this.idProjeto = idProjeto;
     }
-    
+
     public String getLogin() {
         return login;
     }
@@ -46,20 +58,28 @@ public class Usuario {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
-    public boolean isAtivo(){
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public boolean isAtivo() {
         return this.ativo;
     }
-    
-    public void setAtivo(boolean value){
+
+    public void setAtivo(boolean value) {
         this.ativo = value;
     }
 
-    public void setId(long id){
+    public void setId(long id) {
         this.id = id;
     }
-    
-    public long getId(){
+
+    public long getId() {
         return this.id;
     }
 }
