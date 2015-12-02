@@ -11,7 +11,7 @@ public class DaoUsuarioStub implements IDaoUsuario{
 
     @Override
     public Usuario buscar(Usuario usuario) {
-        if(usuario.getLogin().equals("membro")){
+        if(!usuario.getEmail().isEmpty()){
             usuario.setAtivo(true);
             return usuario;
         }
