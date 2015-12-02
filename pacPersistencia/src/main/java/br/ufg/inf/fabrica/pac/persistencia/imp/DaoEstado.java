@@ -8,7 +8,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 /**
  *
@@ -19,8 +18,8 @@ public class DaoEstado implements IDaoEstado{
     @Override
     public Estado salvar(Estado entity){
         
-            String sqlUpdate = "update ESTADO set nome=?, descricao=?, estadoFinal=? where id=?";
-            String sqlInsert = "insert into ESTADO (nome, descricao, estadoFinal) values (?, ?, ?)";
+        String sqlUpdate = "update ESTADO set nome=?, descricao=?, estadoFinal=? where id=?";
+        String sqlInsert = "insert into ESTADO (nome, descricao, estadoFinal) values (?, ?, ?)";
         try {
             PreparedStatement pst;
             if(entity.getId()==0){

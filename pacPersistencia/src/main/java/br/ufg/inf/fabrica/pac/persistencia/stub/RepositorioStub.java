@@ -75,14 +75,14 @@ public class RepositorioStub {
             andamento.setDescricao("Criação do pacote");
             andamento.setIdEstado(estadoNovo.getId());
             andamento.setIdPacote(pacoteAtribuido.getId());
-            andamento.setUsuario(gerente.getId());
+            andamento.setIdUsuario(gerente.getId());
             pacoteAtribuido.getAndamentos().add(andamento.getId());
             //Distribuido
             andamento = new Andamento();
             andamento.setDescricao("Distribuicao do pacote");
             andamento.setIdEstado(estadoAtribuido.getId());
             andamento.setIdPacote(pacoteAtribuido.getId());
-            andamento.setUsuario(membro.getId());
+            andamento.setIdUsuario(membro.getId());
             pacoteAtribuido.getAndamentos().add(andamento.getId());
         
         Pacote pacoteContratado = new Pacote();
@@ -100,21 +100,21 @@ public class RepositorioStub {
             andamento.setDescricao("Criação do pacote");
             andamento.setIdEstado(estadoNovo.getId());
             andamento.setIdPacote(pacoteContratado.getId());
-            andamento.setUsuario(gerente.getId());
+            andamento.setIdUsuario(gerente.getId());
             pacoteAtribuido.getAndamentos().add(andamento.getId());
             //Distribuido
             andamento = new Andamento();
             andamento.setDescricao("Distribuicao do pacote");
             andamento.setIdEstado(estadoAtribuido.getId());
             andamento.setIdPacote(pacoteContratado.getId());
-            andamento.setUsuario(membro.getId());
+            andamento.setIdUsuario(membro.getId());
             pacoteAtribuido.getAndamentos().add(andamento.getId());
             //Contratado
             andamento = new Andamento();
             andamento.setDescricao("Pacote aceito");
             andamento.setIdEstado(estadoContratado.getId());
             andamento.setIdPacote(pacoteContratado.getId());
-            andamento.setUsuario(membro.getId());
+            andamento.setIdUsuario(membro.getId());
             pacoteAtribuido.getAndamentos().add(andamento.getId());
     }
     

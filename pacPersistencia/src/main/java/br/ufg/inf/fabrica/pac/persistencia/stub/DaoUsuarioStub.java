@@ -9,7 +9,6 @@ import br.ufg.inf.fabrica.pac.persistencia.IDaoUsuario;
  */
 public class DaoUsuarioStub implements IDaoUsuario{
 
-    @Override
     public Usuario buscar(Usuario usuario) {
         if(!usuario.getEmail().isEmpty()){
             usuario.setAtivo(true);
