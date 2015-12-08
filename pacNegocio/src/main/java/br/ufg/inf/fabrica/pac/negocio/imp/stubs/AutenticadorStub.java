@@ -6,7 +6,6 @@ import br.ufg.inf.fabrica.pac.negocio.AutenticacaoException;
 import br.ufg.inf.fabrica.pac.negocio.IAutenticador;
 import br.ufg.inf.fabrica.pac.negocio.dominio.Usuario;
 import br.ufg.inf.fabrica.pac.persistencia.IDaoUsuario;
-import br.ufg.inf.fabrica.pac.persistencia.imp.DaoUsuario;
 import br.ufg.inf.fabrica.pac.persistencia.stub.DaoUsuarioStub;
 import br.ufg.inf.fabrica.pac.seguranca.ILdapAutenticador;
 import br.ufg.inf.fabrica.pac.seguranca.imp.LdapAutenticadorStub;
@@ -33,7 +32,7 @@ public class AutenticadorStub implements IAutenticador{
         }
         
         //Verifica na persistencia se o usuário esta ativo
-        IDaoUsuario daoUsuario = new DaoUsuario();
+        IDaoUsuario daoUsuario = new DaoUsuarioStub();
         u = daoUsuario.buscar(u.getId());
         if(u==null){
             daoUsuario.salvar(u);

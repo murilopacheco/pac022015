@@ -60,7 +60,7 @@ public class RepositorioStub {
         Usuario membro = new Usuario();
         membro.setAtivo(true);
         membro.setIdProjeto(projeto.getId());
-        membro.setId(1001);
+        membro.setId(1);
         
         Usuario gerente = new Usuario();
         gerente.setAtivo(true);
@@ -113,7 +113,6 @@ public class RepositorioStub {
         pacoteContratado.setDataCriacao(new Date());
         pacoteContratado.setDataPrevistaRealizacao(new Date( new Date().getTime()+86400000));
         pacoteContratado.setDescricao("Implementar requisito de software RS101");
-        pacoteContratado.setDocumento("documetno");
         pacoteContratado.setNome("rs101");
         pacoteContratado.setIdEstado(estadoContratado.getId());
         pacoteContratado.setIdProjeto(projeto.getId());
