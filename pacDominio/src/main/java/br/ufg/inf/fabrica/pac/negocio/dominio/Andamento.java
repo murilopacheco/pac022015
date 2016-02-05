@@ -16,6 +16,37 @@ public class Andamento {
     private long idEstado;
     private long idUsuario;
 
+    //transient
+    private Pacote pacote;
+    private Estado estado;
+    private Usuario usuario;
+    
+    
+
+    public Pacote getPacote() {
+        return pacote;
+    }
+
+    public void setPacote(Pacote pacote) {
+        this.pacote = pacote;
+    }
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+    
     public long getIdPacote() {
         return idPacote;
     }

@@ -6,7 +6,7 @@ package br.ufg.inf.fabrica.pac.negocio.dominio;
  *     identificação por composição de atributos.
  * 2 - Toda referência ao objeto associado deve ser realizada feita 
  *     identificando o atributo como: "id" + nome da entidade (capitular).
- * 3 - Todo objeto no módulo de negócios que não deve ser persistido, deve ser 
+ * 3 - Todo objeto no módulo domínio que não deve ser persistido, deve ser 
  *     comentado acima com a palavra "Transient"
  */
 
@@ -26,11 +26,39 @@ public class Pacote {
     private boolean abandonado;
     private String documento;
     private Date dataPrevistaRealizacao;
-    //transient
     private long idEstado;
     private long idUsuario;
     private long idProjeto;
+    
+    //transient
+    private Estado estado;
+    private Usuario usuario;
+    private Projeto projeto;
     private List<Long> andamentos;
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Projeto getProjeto() {
+        return projeto;
+    }
+
+    public void setProjeto(Projeto projeto) {
+        this.projeto = projeto;
+    }
 
     public Pacote(){
         andamentos = new ArrayList<>();
