@@ -8,7 +8,6 @@ public class Usuario {
 
     //Id não é gerado automaticamente, ele é gerado pelo ldap
     private long id;
-    private long idProjeto;
     private boolean ativo;
 
     //Transient
@@ -25,14 +24,6 @@ public class Usuario {
         this.login = login;
         this.nome = nome;
         this.email = email;
-    }
-
-    public long getIdProjeto() {
-        return idProjeto;
-    }
-
-    public void setIdProjeto(long idProjeto) {
-        this.idProjeto = idProjeto;
     }
 
     public String getLogin() {

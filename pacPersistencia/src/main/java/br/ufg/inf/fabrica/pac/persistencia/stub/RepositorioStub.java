@@ -59,12 +59,10 @@ public class RepositorioStub {
         //Cria usuarios
         Usuario membro = new Usuario();
         membro.setAtivo(true);
-        membro.setIdProjeto(projeto.getId());
         membro.setId(1);
         
         Usuario gerente = new Usuario();
         gerente.setAtivo(true);
-        gerente.setIdProjeto(projeto.getId());
         gerente.setId(2);
         
         IDaoUsuario daoUsuario = new DaoUsuario();
